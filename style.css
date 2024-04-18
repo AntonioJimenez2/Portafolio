@@ -430,6 +430,16 @@ section.formcontato, .formcontato__form{
   border: 1px solid;
 }
 
+.formcontato__botao[disabled]{
+  transform: none;
+}
+
+.formcontato__botao[disabled]:active{
+  color: #ffffff;
+  background-color: #cccccc;
+  border: solid;
+}
+
 /*footeer*/
 
 section.footer{
