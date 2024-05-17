@@ -24,8 +24,17 @@ for (let i = 0; i < camposContacto.length; i++) {
 } 
 }
 
-// Event Listener del boton
-botonEnviar.addEventListener("click", validar);
+//event Listener de submit
+let submit = document.querySelector(".formcontato__form");
+
+submit.addEventListener("submit", evento => {
+  evento.preventDefault();
+  //validar()
+  if (validar()) {
+    submit.submit();
+  }
+});
+
 
 //funcion validar datos
 function validar(){
@@ -60,6 +69,7 @@ function validar(){
     alert("El mensaje no puede tener más de 300 carácteres");
     return false;
   }
+  return true
 }
 
 //se llama a la funcion para deshabilitar boton
